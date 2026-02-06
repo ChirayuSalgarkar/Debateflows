@@ -1,0 +1,112 @@
+% NPDA Flow - Shared Preamble
+% Include this in all sheet files
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage{amssymb}
+
+%% ============================================================================
+%% COLORS
+%% ============================================================================
+\definecolor{affblue}{RGB}{0, 102, 204}
+\definecolor{negred}{RGB}{180, 30, 30}
+\definecolor{affbg}{RGB}{230, 242, 255}
+\definecolor{negbg}{RGB}{255, 230, 230}
+\definecolor{kpurple}{RGB}{102, 0, 153}
+\definecolor{theoryorange}{RGB}{255, 140, 0}
+\definecolor{cpteal}{RGB}{0, 128, 128}
+\definecolor{dabrown}{RGB}{139, 69, 19}
+\definecolor{gray90}{RGB}{245, 245, 245}
+
+%% ============================================================================
+%% FLOW NOTATION
+%% ============================================================================
+% Core symbols
+\newcommand{\ext}{\textcolor{green!50!black}{$\Rightarrow$}}       % Extend
+\newcommand{\drop}{\textcolor{red}{\textbf{X}}}                    % Dropped
+\newcommand{\turn}{\textcolor{negred}{$\circlearrowleft$}}         % Turn (generic)
+\newcommand{\perm}{\textcolor{affblue}{\textbf{P}}}               % Permutation
+
+% Turns
+\newcommand{\lturn}{\textcolor{negred}{\textbf{LT}}}              % Link turn
+\newcommand{\iturn}{\textcolor{negred}{\textbf{IT}}}              % Impact turn
+
+% Responses
+\newcommand{\nl}{\textcolor{theoryorange}{\textbf{N/L}}}          % No link
+\newcommand{\ow}{\textbf{O/W}}                                     % Outweighs
+\newcommand{\at}{\textcolor{negred}{\textbf{AT:}}}                % Answering / against
+
+% Argument labels
+\newcommand{\link}{\textcolor{kpurple}{\textbf{LK}}}              % Link
+\newcommand{\ix}{\textcolor{affblue}{\textbf{IX}}}                % Impact extension
+\newcommand{\da}{\textcolor{dabrown}{\textbf{DA}}}                % Disadvantage
+\newcommand{\cp}{\textcolor{cpteal}{\textbf{CP}}}                 % Counterplan
+\newcommand{\kk}{\textcolor{kpurple}{\textbf{K}}}                 % Kritik
+\newcommand{\fw}{\textcolor{affblue}{\textbf{FW}}}                % Framework
+\newcommand{\solv}{\textcolor{green!50!black}{\textbf{SV}}}       % Solvency
+
+%% ============================================================================
+%% COLUMN SETUP - Equal widths that fit the page (landscape 11in - 1in margins = 10in / 6 cols)
+%% ============================================================================
+\newcolumntype{F}{>{\raggedright\arraybackslash\small}p{1.5in}}
+
+%% ============================================================================
+%% FLOW TABLE HEADER
+%% ============================================================================
+\newcommand{\flowheader}{%
+    \hline
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{1AC}} &
+    \cellcolor{negbg}\textbf{\textcolor{negred}{1NC}} &
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{2AC}} &
+    \cellcolor{negbg}\textbf{\textcolor{negred}{2NC}} &
+    \cellcolor{negbg}\textbf{\textcolor{negred}{1NR}} &
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{2AR}} \\
+    \hline
+}
+
+%% ============================================================================
+%% FLOW ROWS - Tall cells for writing
+%% ============================================================================
+\newcommand{\flowrow}{%
+    & & & & & \\[2.5em]
+    \hline
+}
+
+\newcommand{\flowrowbig}{%
+    & & & & & \\[3.5em]
+    \hline
+}
+
+\newcommand{\flowrowna}{%
+    \cellcolor{gray90}\centering\textit{--} & & & & & \\[2.5em]
+    \hline
+}
+
+%% ============================================================================
+%% STANDARD FLOW TABLE
+%% ============================================================================
+\newenvironment{flowtable}{%
+    \begin{tabular}{|F|F|F|F|F|F|}
+    \flowheader
+}{%
+    \end{tabular}
+}
+
+%% ============================================================================
+%% ROUND METADATA - Edit these for each round
+%% ============================================================================
+\newcommand{\tournament}{Tournament Name}
+\newcommand{\roundnum}{Round 1}
+\newcommand{\affteam}{Aff Team}
+\newcommand{\negteam}{Neg Team}
+\newcommand{\judge}{Judge}
+\newcommand{\resolution}{THBT...}

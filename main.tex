@@ -1,0 +1,33 @@
+% NPDA Flow - Main Compiler
+% Compiles all flow sheets into one document
+
+\documentclass[11pt,landscape]{article}
+\input{preamble}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[L]{\textcolor{affblue}{\textbf{AFF:}} \affteam{} \quad vs \quad \textcolor{negred}{\textbf{NEG:}} \negteam}
+\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{Judge: \judge}
+
+\begin{document}
+
+\input{sheets/cover}
+\newpage
+\input{sheets/manual}
+\newpage
+\input{sheets/case}
+\newpage
+\input{sheets/da}
+\newpage
+\input{sheets/cp}
+\newpage
+\input{sheets/k}
+\newpage
+\input{sheets/theory}
+\newpage
+\input{sheets/overview}
+
+\end{document}
