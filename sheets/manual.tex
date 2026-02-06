@@ -1,0 +1,160 @@
+% Manual - How to Use This Flow Sheet
+
+\thispagestyle{empty}
+
+\begin{center}
+    {\Huge\textbf{Flow Sheet Manual}}\\[0.3em]
+    {\large How to use this NPDA debate flow document}
+\end{center}
+
+\vspace{1em}
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\vspace{0.8em}
+
+%% --- GETTING STARTED ---
+\noindent{\Large\textbf{1. Setup}}
+\vspace{0.3em}
+
+\noindent Before each round, edit the metadata in \texttt{preamble.tex}:
+
+\vspace{0.3em}
+\begin{tabular}{|l|l|}
+    \hline
+    \rowcolor{gray90}
+    \textbf{Command} & \textbf{What to change} \\
+    \hline
+    \verb|\tournament{...}| & Tournament name \\
+    \verb|\roundnum{...}| & Round number (e.g.\ Round 1, Semis) \\
+    \verb|\affteam{...}| & Aff team name / code \\
+    \verb|\negteam{...}| & Neg team name / code \\
+    \verb|\judge{...}| & Judge name \\
+    \verb|\resolution{...}| & The resolution text \\
+    \hline
+\end{tabular}
+
+\vspace{0.5em}
+\noindent Fill in the \textbf{Cover Sheet} speaker names and case architecture during prep time.
+
+\vspace{1em}
+
+%% --- FLOW STRUCTURE ---
+\noindent{\Large\textbf{2. Document Structure}}
+\vspace{0.3em}
+
+\noindent Each page is a separate flow sheet. Write across the columns left to right as speeches happen:
+
+\vspace{0.3em}
+\begin{tabular}{|l|l|}
+    \hline
+    \rowcolor{gray90}
+    \textbf{Sheet} & \textbf{What to flow} \\
+    \hline
+    \textbf{Case Flow} & Aff case arguments (framework, contentions, solvency) \\
+    \textbf{DA Flow} & Disadvantages run by neg \\
+    \textbf{CP Flow} & Counterplans run by neg \\
+    \textbf{K Flow} & Kritiks run by neg \\
+    \textbf{Theory Flow} & Topicality, procedurals, theory arguments \\
+    \textbf{Overview Flow} & Big-picture framing, decision calculus, key voters \\
+    \hline
+\end{tabular}
+
+\vspace{0.5em}
+\noindent The six columns on each flow correspond to the six NPDA speeches:
+
+\vspace{0.3em}
+\begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    \cellcolor{affbg}\textcolor{affblue}{\textbf{1AC}} &
+    \cellcolor{negbg}\textcolor{negred}{\textbf{1NC}} &
+    \cellcolor{affbg}\textcolor{affblue}{\textbf{2AC}} &
+    \cellcolor{negbg}\textcolor{negred}{\textbf{2NC}} &
+    \cellcolor{negbg}\textcolor{negred}{\textbf{1NR}} &
+    \cellcolor{affbg}\textcolor{affblue}{\textbf{2AR}} \\
+    \hline
+    7 min & 8 min & 8 min & 8 min & 4 min & 5 min \\
+    \hline
+\end{tabular}
+
+\vspace{0.5em}
+\noindent \textcolor{affblue}{Blue columns} = Aff speeches. \textcolor{negred}{Red columns} = Neg speeches. Write each response \textit{directly across} from the argument it answers.
+
+\vspace{1em}
+
+%% --- NOTATION GUIDE ---
+\noindent{\Large\textbf{3. Notation Reference}}
+\vspace{0.3em}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{|c|l|X|}
+    \hline
+    \rowcolor{gray90}
+    \textbf{Symbol} & \textbf{Macro} & \textbf{Meaning} \\
+    \hline
+    \multicolumn{3}{|l|}{\cellcolor{gray90}\textit{Core Symbols}} \\
+    \hline
+    \ext & \verb|\ext| & \textbf{Extend} -- carry an unanswered argument forward to the next speech \\
+    \drop & \verb|\drop| & \textbf{Dropped} -- opponent failed to respond; argument stands \\
+    \turn & \verb|\turn| & \textbf{Turn} -- argument flipped; now helps the other side \\
+    \perm & \verb|\perm| & \textbf{Perm} -- permutation test (aff can do the plan + the alt/CP) \\
+    \hline
+    \multicolumn{3}{|l|}{\cellcolor{gray90}\textit{Turns \& Responses}} \\
+    \hline
+    \lturn & \verb|\lturn| & \textbf{Link turn} -- the link goes the opposite direction \\
+    \iturn & \verb|\iturn| & \textbf{Impact turn} -- the impact is actually good \\
+    \nl & \verb|\nl| & \textbf{No link} -- the argument doesn't connect to the case \\
+    \ow & \verb|\ow| & \textbf{Outweighs} -- this impact is bigger (scope, magnitude, probability) \\
+    \at & \verb|\at| & \textbf{Against / Answering} -- prefix for responses (e.g.\ \at\ C1) \\
+    \hline
+    \multicolumn{3}{|l|}{\cellcolor{gray90}\textit{Argument Labels}} \\
+    \hline
+    \link & \verb|\link| & \textbf{Link} -- marks where a link argument is made \\
+    \ix & \verb|\ix| & \textbf{Impact extension} -- extending or developing an impact \\
+    \da & \verb|\da| & \textbf{Disadvantage} -- labels a DA argument \\
+    \cp & \verb|\cp| & \textbf{Counterplan} -- labels a CP argument \\
+    \kk & \verb|\kk| & \textbf{Kritik} -- labels a K argument \\
+    \fw & \verb|\fw| & \textbf{Framework} -- labels a framework argument \\
+    \solv & \verb|\solv| & \textbf{Solvency} -- labels a solvency argument \\
+    \hline
+\end{tabularx}
+
+\vspace{1em}
+
+%% --- USAGE EXAMPLES ---
+\noindent{\Large\textbf{4. Example Flow Entries}}
+\vspace{0.3em}
+
+\noindent Common patterns you'll write in cells:
+
+\vspace{0.3em}
+\begin{tabular}{|l|l|}
+    \hline
+    \rowcolor{gray90}
+    \textbf{You write} & \textbf{Meaning} \\
+    \hline
+    \verb|\ext\ econ impact| & \ext\ econ impact -- extending the econ impact forward \\
+    \verb|\drop\ solvency| & \drop\ solvency -- they dropped solvency \\
+    \verb|\at\ C1: \nl| & \at\ C1: \nl\ -- answering contention 1 with ``no link'' \\
+    \verb|\lturn\ -- helps aff| & \lturn\ -- helps aff -- link-turning the argument \\
+    \verb|\ix\ poverty| & \ix\ poverty -- extending the poverty impact \\
+    \verb|\ow\ -- scope + mag| & \ow\ -- scope + mag -- outweighs on scope and magnitude \\
+    \verb|\perm\ do both| & \perm\ do both -- perm: do both the plan and alt \\
+    \hline
+\end{tabular}
+
+\vspace{1em}
+
+%% --- TIPS ---
+\noindent{\Large\textbf{5. Tips}}
+\vspace{0.3em}
+
+\begin{itemize}
+    \setlength{\itemsep}{0.2em}
+    \item Write across rows: each response goes \textit{directly across} from the argument it answers.
+    \item Use arrows or lines by hand to connect arguments that interact across rows.
+    \item The \verb|\flowrow| and \verb|\flowrowbig| commands add blank rows. Add more rows to any sheet by inserting \verb|\flowrow| inside a \texttt{flowtable} environment.
+    \item Print this document \textbf{landscape} for maximum writing space.
+    \item After the round, you can type your notes into the cells for a permanent digital record.
+    \item To auto-recompile the PDF on save, run \texttt{./watch.sh} in a terminal.
+\end{itemize}

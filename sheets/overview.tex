@@ -1,0 +1,163 @@
+% Overview / Decision Sheet
+% WORKFLOW: Fill in the variables below, tables auto-assemble.
+
+\fancyhead[L]{\textbf{OVERVIEW}}
+\fancyhead[C]{\tournament{} | \roundnum}
+\fancyhead[R]{\today}
+
+%% ============================================================================
+%% CELL DEFINITIONS
+%% ============================================================================
+
+%% ==================== Overviews ====================
+\def\OVaff{}
+\def\OVneg{}
+
+%% ==================== Impact Comparison ====================
+% Aff impacts
+\def\IMPaffA{}       % Impact name
+\def\IMPaffAmag{}    % Magnitude
+\def\IMPaffAprob{}   % Probability
+\def\IMPaffAtime{}   % Timeframe
+\def\IMPaffArev{}    % Reversibility
+
+\def\IMPaffB{}
+\def\IMPaffBmag{}
+\def\IMPaffBprob{}
+\def\IMPaffBtime{}
+\def\IMPaffBrev{}
+
+% Neg impacts
+\def\IMPnegA{}
+\def\IMPnegAmag{}
+\def\IMPnegAprob{}
+\def\IMPnegAtime{}
+\def\IMPnegArev{}
+
+\def\IMPnegB{}
+\def\IMPnegBmag{}
+\def\IMPnegBprob{}
+\def\IMPnegBtime{}
+\def\IMPnegBrev{}
+
+%% ==================== Voting Issues ====================
+\def\VOTEaffA{}
+\def\VOTEaffB{}
+\def\VOTEaffC{}
+\def\VOTEnegA{}
+\def\VOTEnegB{}
+\def\VOTEnegC{}
+
+%% ==================== RFD ====================
+\def\RFD{}
+% Set winner: change to $\boxtimes$ for the winning side
+\def\WINaff{$\square$}
+\def\WINneg{$\square$}
+
+%% ==================== Speaker Eval ====================
+\def\SPKpmNotes{}
+\def\SPKpmPts{/30}
+\def\SPKloNotes{}
+\def\SPKloPts{/30}
+\def\SPKmgNotes{}
+\def\SPKmgPts{/30}
+\def\SPKmoNotes{}
+\def\SPKmoPts{/30}
+
+%% ============================================================================
+%% TABLES — Auto-assembled. Don't edit below.
+%% ============================================================================
+
+% Impact Calc
+\noindent{\Large\textbf{Impact Calculus / Overviews}}
+
+\vspace{0.4em}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+    \hline
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{AFF Overviews}} &
+    \cellcolor{negbg}\textbf{\textcolor{negred}{NEG Overviews}} \\
+    \hline
+    \OVaff & \OVneg \\[4em]
+    \hline
+\end{tabularx}
+
+\vspace{0.5em}
+
+% Impact Comparison Table
+\noindent\textbf{Impact Comparison:}
+
+\vspace{0.3em}
+
+\begin{tabular}{|p{2in}|c|c|c|c|}
+    \hline
+    \rowcolor{gray90}
+    \textbf{Impact} & \textbf{Magnitude} & \textbf{Probability} & \textbf{Timeframe} & \textbf{Reversibility} \\
+    \hline
+    \cellcolor{affbg}\IMPaffA & \IMPaffAmag & \IMPaffAprob & \IMPaffAtime & \IMPaffArev \\[0.8em]
+    \hline
+    \cellcolor{affbg}\IMPaffB & \IMPaffBmag & \IMPaffBprob & \IMPaffBtime & \IMPaffBrev \\[0.8em]
+    \hline
+    \cellcolor{negbg}\IMPnegA & \IMPnegAmag & \IMPnegAprob & \IMPnegAtime & \IMPnegArev \\[0.8em]
+    \hline
+    \cellcolor{negbg}\IMPnegB & \IMPnegBmag & \IMPnegBprob & \IMPnegBtime & \IMPnegBrev \\[0.8em]
+    \hline
+\end{tabular}
+
+\vspace{0.8em}
+
+% Voting Issues
+\noindent{\Large\textbf{Voting Issues}}
+
+\vspace{0.3em}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+    \hline
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{Vote AFF Because...}} &
+    \cellcolor{negbg}\textbf{\textcolor{negred}{Vote NEG Because...}} \\
+    \hline
+    1. \VOTEaffA & 1. \VOTEnegA \\[1.5em]
+    \hline
+    2. \VOTEaffB & 2. \VOTEnegB \\[1.5em]
+    \hline
+    3. \VOTEaffC & 3. \VOTEnegC \\[1.5em]
+    \hline
+\end{tabularx}
+
+\vspace{0.8em}
+
+% Decision
+\begin{center}
+\begin{tabular}{|p{7in}|}
+    \hline
+    \rowcolor{gray90}
+    \textbf{RFD / Decision Notes:} \\
+    \hline
+    \RFD \\[2.5em]
+    \hline
+    \textbf{Winner:} \hspace{0.5in} \WINaff\ AFF \hspace{2in} \WINneg\ NEG \\[0.5em]
+    \hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5em}
+
+% Speaker Points
+\noindent{\Large\textbf{Speaker Evaluation}}
+
+\vspace{0.3em}
+
+\begin{tabularx}{\textwidth}{|c|X|c|}
+    \hline
+    \rowcolor{gray90}
+    \textbf{Speaker} & \textbf{Notes} & \textbf{Pts} \\
+    \hline
+    \cellcolor{affbg}1A (PM) & \SPKpmNotes & \SPKpmPts \\[0.8em]
+    \hline
+    \cellcolor{negbg}1N (LO) & \SPKloNotes & \SPKloPts \\[0.8em]
+    \hline
+    \cellcolor{affbg}2A (MG) & \SPKmgNotes & \SPKmgPts \\[0.8em]
+    \hline
+    \cellcolor{negbg}2N (MO) & \SPKmoNotes & \SPKmoPts \\[0.8em]
+    \hline
+\end{tabularx}

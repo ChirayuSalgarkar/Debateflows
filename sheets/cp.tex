@@ -1,0 +1,147 @@
+% Counterplan Flow Sheet
+% WORKFLOW: Fill in each speech section as it happens.
+%           Sections: CO (competition), PM (perms), SN (solvency/net benefit)
+%           Speeches: NC, MG, MO, LR, AR  (1AC col is grayed)
+
+\fancyhead[L]{\textbf{CP FLOW}}
+\fancyhead[C]{\tournament{} | \roundnum}
+\fancyhead[R]{\today}
+
+%% ============================================================================
+%% CELL DEFINITIONS
+%% Naming: \CP<section><row><speech>
+%%   Sections: CO (competition), PM (perms), SN (solvency/NB)
+%%   Rows:     a, b, c
+%%   Speech:   NC, MG, MO, LR, AR
+%% ============================================================================
+
+%% ==================== 1NC (LO) ====================
+% -- Competition --
+\def\CPCOaNC{}
+\def\CPCObNC{}
+% -- Perms --
+\def\CPPMaNC{}
+\def\CPPMbNC{}
+\def\CPPMcNC{}
+% -- Solvency / NB --
+\def\CPSNaNC{}
+\def\CPSNbNC{}
+\def\CPSNcNC{}
+
+%% ==================== 2AC (MG) ====================
+% -- Competition --
+\def\CPCOaMG{}
+\def\CPCObMG{}
+% -- Perms --
+\def\CPPMaMG{}
+\def\CPPMbMG{}
+\def\CPPMcMG{}
+% -- Solvency / NB --
+\def\CPSNaMG{}
+\def\CPSNbMG{}
+\def\CPSNcMG{}
+
+%% ==================== 2NC (MO) ====================
+% -- Competition --
+\def\CPCOaMO{}
+\def\CPCObMO{}
+% -- Perms --
+\def\CPPMaMO{}
+\def\CPPMbMO{}
+\def\CPPMcMO{}
+% -- Solvency / NB --
+\def\CPSNaMO{}
+\def\CPSNbMO{}
+\def\CPSNcMO{}
+
+%% ==================== 1NR (LO) ====================
+% -- Competition --
+\def\CPCOaLR{}
+\def\CPCObLR{}
+% -- Perms --
+\def\CPPMaLR{}
+\def\CPPMbLR{}
+\def\CPPMcLR{}
+% -- Solvency / NB --
+\def\CPSNaLR{}
+\def\CPSNbLR{}
+\def\CPSNcLR{}
+
+%% ==================== 2AR (PM) ====================
+% -- Competition --
+\def\CPCOaAR{}
+\def\CPCObAR{}
+% -- Perms --
+\def\CPPMaAR{}
+\def\CPPMbAR{}
+\def\CPPMcAR{}
+% -- Solvency / NB --
+\def\CPSNaAR{}
+\def\CPSNbAR{}
+\def\CPSNcAR{}
+
+%% ============================================================================
+%% TABLES — Auto-assembled. Don't edit below.
+%% ============================================================================
+
+\noindent{\Large\textbf{\textcolor{cpteal}{Counterplan:}}} \hrulefill
+
+\vspace{0.3em}
+
+% CP Structure
+\small
+\begin{tabular}{|p{3in}|p{3in}|p{3in}|}
+    \hline
+    \rowcolor{gray90}
+    \textbf{CP Text / Mechanism} & \textbf{Net Benefit} & \textbf{Solvency} \\
+    \hline
+    &&\\[1.8em]
+    \hline
+\end{tabular}
+\normalsize
+
+\vspace{0.6em}
+
+% Competition
+\noindent\textbf{Competition:}
+\vspace{0.2em}
+
+\begin{tabular}{|F|F|F|F|F|F|}
+\flowheader
+\cellcolor{gray90}\centering\textit{--} & \CPCOaNC & \CPCOaMG & \CPCOaMO & \CPCOaLR & \CPCOaAR \\[2.5em]
+\hline
+\cellcolor{gray90}\centering\textit{--} & \CPCObNC & \CPCObMG & \CPCObMO & \CPCObLR & \CPCObAR \\[2.5em]
+\hline
+\end{tabular}
+
+\vspace{0.6em}
+
+% Permutations
+\noindent\textbf{Permutations:}
+\vspace{0.2em}
+
+\begin{tabular}{|F|F|F|F|F|F|}
+\flowheader
+\cellcolor{gray90}\centering\textit{--} & \CPPMaNC & \CPPMaMG & \CPPMaMO & \CPPMaLR & \CPPMaAR \\[2.5em]
+\hline
+\cellcolor{gray90}\centering\textit{--} & \CPPMbNC & \CPPMbMG & \CPPMbMO & \CPPMbLR & \CPPMbAR \\[2.5em]
+\hline
+\cellcolor{gray90}\centering\textit{--} & \CPPMcNC & \CPPMcMG & \CPPMcMO & \CPPMcLR & \CPPMcAR \\[2.5em]
+\hline
+\end{tabular}
+
+\vspace{0.6em}
+
+% Solvency / NB Debate
+\noindent\textbf{CP Solvency / Net Benefit:}
+\vspace{0.2em}
+
+\begin{tabular}{|F|F|F|F|F|F|}
+\flowheader
+\cellcolor{gray90}\centering\textit{--} & \CPSNaNC & \CPSNaMG & \CPSNaMO & \CPSNaLR & \CPSNaAR \\[2.5em]
+\hline
+\cellcolor{gray90}\centering\textit{--} & \CPSNbNC & \CPSNbMG & \CPSNbMO & \CPSNbLR & \CPSNbAR \\[2.5em]
+\hline
+\cellcolor{gray90}\centering\textit{--} & \CPSNcNC & \CPSNcMG & \CPSNcMO & \CPSNcLR & \CPSNcAR \\[2.5em]
+\hline
+\end{tabular}
