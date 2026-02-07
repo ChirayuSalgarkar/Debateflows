@@ -1,223 +1,96 @@
 % Case Flow Sheet
-% WORKFLOW: Fill in each speech section as it happens. The tables at the
-%           bottom auto-assemble from your definitions.
-%           Search for "1AC", "1NC", etc. to jump to each speech's block.
-
 \fancyhead[L]{\textbf{CASE FLOW}}
 \fancyhead[C]{\tournament{} | \roundnum}
 \fancyhead[R]{\today}
 
 %% ============================================================================
-%% CELL DEFINITIONS — Fill these in column-by-column as speeches happen.
-%% Naming: \<section><row><speech>
-%%   Sections: FW (framework), CA (C1), CB (C2), CC (C3), SV (solvency)
-%%   Rows:     a, b, c, d
-%%   Speech:   AC, NC, MG, MO, LR, AR
+%% CELL DEFINITIONS
+%% Sections: FW (Framework), AA (Adv 1), AB (Adv 2), AC (Adv 3), AD (Adv 4)
 %% ============================================================================
 
-%% ==================== 1AC (PM) ====================
-% -- Framework --
-\def\FWaAC{}
-\def\FWbAC{}
-% -- Contention 1 --
-\def\CAaAC{}
-\def\CAbAC{}
-\def\CAcAC{}
-\def\CAdAC{}
-% -- Contention 2 --
-\def\CBaAC{}
-\def\CBbAC{}
-\def\CBcAC{}
-% -- Contention 3 --
-\def\CCaAC{}
-\def\CCbAC{}
-\def\CCcAC{}
-% -- Solvency --
-\def\SVaAC{}
-\def\SVbAC{}
+%% -------------------- 1AC (PM) --------------------
 
-%% ==================== 1NC (LO) ====================
-% -- Framework --
-\def\FWaNC{}
-\def\FWbNC{}
-% -- Contention 1 --
-\def\CAaNC{}
-\def\CAbNC{}
-\def\CAcNC{}
-\def\CAdNC{}
-% -- Contention 2 --
-\def\CBaNC{}
-\def\CBbNC{}
-\def\CBcNC{}
-% -- Contention 3 --
-\def\CCaNC{}
-\def\CCbNC{}
-\def\CCcNC{}
-% -- Solvency --
-\def\SVaNC{}
-\def\SVbNC{}
+\def\FWaAC{
+\n
+  \x \fw ROB something
+  \n
+    \x something
+    \x something
+  \b
 
-%% ==================== 2AC (MG) ====================
-% -- Framework --
-\def\FWaMG{}
-\def\FWbMG{}
-% -- Contention 1 --
-\def\CAaMG{}
-\def\CAbMG{}
-\def\CAcMG{}
-\def\CAdMG{}
-% -- Contention 2 --
-\def\CBaMG{}
-\def\CBbMG{}
-\def\CBcMG{}
-% -- Contention 3 --
-\def\CCaMG{}
-\def\CCbMG{}
-\def\CCcMG{}
-% -- Solvency --
-\def\SVaMG{}
-\def\SVbMG{}
+  \x something else new
+\b
+}
 
-%% ==================== 2NC (MO) ====================
-% -- Framework --
-\def\FWaMO{}
-\def\FWbMO{}
-% -- Contention 1 --
-\def\CAaMO{}
-\def\CAbMO{}
-\def\CAcMO{}
-\def\CAdMO{}
-% -- Contention 2 --
-\def\CBaMO{}
-\def\CBbMO{}
-\def\CBcMO{}
-% -- Contention 3 --
-\def\CCaMO{}
-\def\CCbMO{}
-\def\CCcMO{}
-% -- Solvency --
-\def\SVaMO{}
-\def\SVbMO{}
+\def\AAaAC{} % Advantage 1
+\def\ABaAC{} % Advantage 2
+\def\ACaAC{} % Advantage 3
+\def\ADaAC{} % Advantage 4
 
-%% ==================== 1NR (LO) ====================
-% -- Framework --
-\def\FWaLR{}
-\def\FWbLR{}
-% -- Contention 1 --
-\def\CAaLR{}
-\def\CAbLR{}
-\def\CAcLR{}
-\def\CAdLR{}
-% -- Contention 2 --
-\def\CBaLR{}
-\def\CBbLR{}
-\def\CBcLR{}
-% -- Contention 3 --
-\def\CCaLR{}
-\def\CCbLR{}
-\def\CCcLR{}
-% -- Solvency --
-\def\SVaLR{}
-\def\SVbLR{}
+%% -------------------- 1NC (LO) --------------------
+\def\FWaNC{} \def\AAaNC{} \def\ABaNC{} \def\ACaNC{} \def\ADaNC{}
 
-%% ==================== 2AR (PM) ====================
-% -- Framework --
-\def\FWaAR{}
-\def\FWbAR{}
-% -- Contention 1 --
-\def\CAaAR{}
-\def\CAbAR{}
-\def\CAcAR{}
-\def\CAdAR{}
-% -- Contention 2 --
-\def\CBaAR{}
-\def\CBbAR{}
-\def\CBcAR{}
-% -- Contention 3 --
-\def\CCaAR{}
-\def\CCbAR{}
-\def\CCcAR{}
-% -- Solvency --
-\def\SVaAR{}
-\def\SVbAR{}
+%% -------------------- 2AC (MG) --------------------
+\def\FWaMG{} \def\AAaMG{} \def\ABaMG{} \def\ACaMG{} \def\ADaMG{}
+
+%% -------------------- 2NC (MO) --------------------
+\def\FWaMO{} \def\AAaMO{} \def\ABaMO{} \def\ACaMO{} \def\ADaMO{}
+
+%% -------------------- 1NR (LO) --------------------
+\def\FWaLR{} \def\AAaLR{} \def\ABaLR{} \def\ACaLR{} \def\ADaLR{}
+
+%% -------------------- 2AR (PM) --------------------
+\def\FWaAR{} \def\AAaAR{} \def\ABaAR{} \def\ACaAR{} \def\ADaAR{}
+
 
 %% ============================================================================
-%% TABLES — Auto-assembled from definitions above. Don't edit below.
+%% THE FLOW ENGINE (PARACOL)
 %% ============================================================================
 
-% Framework
-\noindent\textbf{\Large Framework / Interpretation}
-\vspace{0.3em}
-
-\begin{tabular}{|F|F|F|F|F|F|}
-\flowheader
-\FWaAC & \FWaNC & \FWaMG & \FWaMO & \FWaLR & \FWaAR \\[2.5em]
-\hline
-\FWbAC & \FWbNC & \FWbMG & \FWbMO & \FWbLR & \FWbAR \\[2.5em]
-\hline
-\end{tabular}
-
-\vspace{0.8em}
-
-% Contention 1
-\noindent\textbf{\Large Contention 1:} \hrulefill
-\vspace{0.3em}
-
-\begin{tabular}{|F|F|F|F|F|F|}
-\flowheader
-\CAaAC & \CAaNC & \CAaMG & \CAaMO & \CAaLR & \CAaAR \\[2.5em]
-\hline
-\CAbAC & \CAbNC & \CAbMG & \CAbMO & \CAbLR & \CAbAR \\[2.5em]
-\hline
-\CAcAC & \CAcNC & \CAcMG & \CAcMO & \CAcLR & \CAcAR \\[2.5em]
-\hline
-\CAdAC & \CAdNC & \CAdMG & \CAdMO & \CAdLR & \CAdAR \\[2.5em]
-\hline
-\end{tabular}
-
-\vspace{0.8em}
-
-% Contention 2
-\noindent\textbf{\Large Contention 2:} \hrulefill
-\vspace{0.3em}
-
-\begin{tabular}{|F|F|F|F|F|F|}
-\flowheader
-\CBaAC & \CBaNC & \CBaMG & \CBaMO & \CBaLR & \CBaAR \\[2.5em]
-\hline
-\CBbAC & \CBbNC & \CBbMG & \CBbMO & \CBbLR & \CBbAR \\[2.5em]
-\hline
-\CBcAC & \CBcNC & \CBcMG & \CBcMO & \CBcLR & \CBcAR \\[2.5em]
-\hline
-\end{tabular}
+% --- FRAMEWORK ---
+\noindent\textbf{\Large Framework} \hrulefill
+\begin{paracol}{6}
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{PMC}} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{LOC}} \switchcolumn
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{MG}} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{MO}} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{LOR}} \switchcolumn
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{PMR}} \switchcolumn*
+    \FWaAC \switchcolumn \FWaNC \switchcolumn \FWaMG \switchcolumn \FWaMO \switchcolumn \FWaLR \switchcolumn \FWaAR
+\end{paracol}
 
 \newpage
-\fancyhead[L]{\textbf{CASE FLOW (cont.)}}
 
-% Contention 3
-\noindent\textbf{\Large Contention 3:} \hrulefill
-\vspace{0.3em}
+% --- ADVANTAGE 1 ---
+\noindent\textbf{\Large Advantage 1:} \hrulefill
+\begin{paracol}{6}
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{PMC}} \switchcolumn \cellcolor{negbg}\textbf{\textcolor{negred}{LOC}} \switchcolumn \cellcolor{affbg}\textbf{\textcolor{affblue}{MG}} \switchcolumn \cellcolor{negbg}\textbf{\textcolor{negred}{MO}} \switchcolumn \cellcolor{negbg}\textbf{\textcolor{negred}{LOR}} \switchcolumn \cellcolor{affbg}\textbf{\textcolor{affblue}{PMR}} \switchcolumn*
+    \AAaAC \switchcolumn \AAaNC \switchcolumn \AAaMG \switchcolumn \AAaMO \switchcolumn \AAaLR \switchcolumn \AAaAR
+\end{paracol}
 
-\begin{tabular}{|F|F|F|F|F|F|}
-\flowheader
-\CCaAC & \CCaNC & \CCaMG & \CCaMO & \CCaLR & \CCaAR \\[2.5em]
-\hline
-\CCbAC & \CCbNC & \CCbMG & \CCbMO & \CCbLR & \CCbAR \\[2.5em]
-\hline
-\CCcAC & \CCcNC & \CCcMG & \CCcMO & \CCcLR & \CCcAR \\[2.5em]
-\hline
-\end{tabular}
+\newpage
 
-\vspace{0.8em}
+% --- ADVANTAGE 2 ---
+\noindent\textbf{\Large Advantage 2:} \hrulefill
+\begin{paracol}{6}
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{PMC}} \switchcolumn \cellcolor{negbg}\textbf{\textcolor{negred}{LOC}} \switchcolumn \cellcolor{affbg}\textbf{\textcolor{affblue}{MG}} \switchcolumn \cellcolor{negbg}\textbf{\textcolor{negred}{MO}} \switchcolumn \cellcolor{negbg}\textbf{\textcolor{negred}{LOR}} \switchcolumn \cellcolor{affbg}\textbf{\textcolor{affblue}{PMR}} \switchcolumn*
+    \ABaAC \switchcolumn \ABaNC \switchcolumn \ABaMG \switchcolumn \ABaMO \switchcolumn \ABaLR \switchcolumn \ABaAR
+\end{paracol}
 
-% Solvency
-\noindent\textbf{\Large Solvency}
-\vspace{0.3em}
+\newpage
 
-\begin{tabular}{|F|F|F|F|F|F|}
-\flowheader
-\SVaAC & \SVaNC & \SVaMG & \SVaMO & \SVaLR & \SVaAR \\[2.5em]
-\hline
-\SVbAC & \SVbNC & \SVbMG & \SVbMO & \SVbLR & \SVbAR \\[2.5em]
-\hline
-\end{tabular}
+% --- ADVANTAGE 3 ---
+\noindent\textbf{\Large Advantage 3:} \hrulefill
+\begin{paracol}{6}
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{PMC}} \switchcolumn \cellcolor{negbg}\textbf{\textcolor{negred}{LOC}} \switchcolumn \cellcolor{affbg}\textbf{\textcolor{affblue}{MG}} \switchcolumn \cellcolor{negbg}\textbf{\textcolor{negred}{MO}} \switchcolumn \cellcolor{negbg}\textbf{\textcolor{negred}{LOR}} \switchcolumn \cellcolor{affbg}\textbf{\textcolor{affblue}{PMR}} \switchcolumn*
+    \ACaAC \switchcolumn \ACaNC \switchcolumn \ACaMG \switchcolumn \ACaMO \switchcolumn \ACaLR \switchcolumn \ACaAR
+\end{paracol}
+
+\newpage
+
+% --- ADVANTAGE 4 ---
+\noindent\textbf{\Large Advantage 4:} \hrulefill
+\begin{paracol}{6}
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{PMC}} \switchcolumn \cellcolor{negbg}\textbf{\textcolor{negred}{LOC}} \switchcolumn \cellcolor{affbg}\textbf{\textcolor{affblue}{MG}} \switchcolumn \cellcolor{negbg}\textbf{\textcolor{negred}{MO}} \switchcolumn \cellcolor{negbg}\textbf{\textcolor{negred}{LOR}} \switchcolumn \cellcolor{affbg}\textbf{\textcolor{affblue}{PMR}} \switchcolumn*
+    \ADaAC \switchcolumn \ADaNC \switchcolumn \ADaMG \switchcolumn \ADaMO \switchcolumn \ADaLR \switchcolumn \ADaAR
+\end{paracol}
