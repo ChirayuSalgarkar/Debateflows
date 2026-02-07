@@ -43,22 +43,22 @@
 \noindent{\Large\textbf{2. Document Structure}}
 \vspace{0.3em}
 
-\noindent Each page is a separate flow sheet. Write across the columns left to right as speeches happen:
+\noindent Each page is a separate flow sheet. should be able to fill columns, but \LaTeX is being finicky, so I'm deleting the how to use right now.
 
 \vspace{0.3em}
-\begin{tabular}{|l|l|}
-    \hline
-    \rowcolor{gray90}
-    \textbf{Sheet} & \textbf{What to flow} \\
-    \hline
-    \textbf{Case Flow} & Aff case arguments (framework, contentions, solvency) \\
-    \textbf{DA Flow} & Disadvantages run by neg \\
-    \textbf{CP Flow} & Counterplans run by neg \\
-    \textbf{K Flow} & Kritiks run by neg \\
-    \textbf{Theory Flow} & Topicality, procedurals, theory arguments \\
-    \textbf{Overview Flow} & Big-picture framing, decision calculus, key voters \\
-    \hline
-\end{tabular}
+% \begin{tabular}{|l|l|}
+%     \hline
+%     \rowcolor{gray90}
+%     \textbf{Sheet} & \textbf{What to flow} \\
+%     \hline
+%     \textbf{Case Flow} & Aff case arguments (framework, contentions, solvency) \\
+%     \textbf{DA Flow} & Disadvantages run by neg \\
+%     \textbf{CP Flow} & Counterplans run by neg \\
+%     \textbf{K Flow} & Kritiks run by neg \\
+%     \textbf{Theory Flow} & Topicality, procedurals, theory arguments \\
+%     \textbf{Overview Flow} & Big-picture framing, decision calculus, key voters \\
+%     \hline
+% \end{tabular}
 
 \vspace{0.5em}
 \noindent The six columns on each flow correspond to the six NPDA speeches:
@@ -66,21 +66,21 @@
 \vspace{0.3em}
 \begin{tabular}{|c|c|c|c|c|c|}
     \hline
-    \cellcolor{affbg}\textcolor{affblue}{\textbf{1AC}} &
-    \cellcolor{negbg}\textcolor{negred}{\textbf{1NC}} &
-    \cellcolor{affbg}\textcolor{affblue}{\textbf{2AC}} &
-    \cellcolor{negbg}\textcolor{negred}{\textbf{2NC}} &
-    \cellcolor{negbg}\textcolor{negred}{\textbf{1NR}} &
-    \cellcolor{affbg}\textcolor{affblue}{\textbf{2AR}} \\
+    \cellcolor{affbg}\textcolor{affblue}{\textbf{PMC}} &
+    \cellcolor{negbg}\textcolor{negred}{\textbf{LOC}} &
+    \cellcolor{affbg}\textcolor{affblue}{\textbf{MG}} &
+    \cellcolor{negbg}\textcolor{negred}{\textbf{MO}} &
+    \cellcolor{negbg}\textcolor{negred}{\textbf{LOR}} &
+    \cellcolor{affbg}\textcolor{affblue}{\textbf{PMR}} \\
     \hline
     7 min & 8 min & 8 min & 8 min & 4 min & 5 min \\
     \hline
 \end{tabular}
 
 \vspace{0.5em}
-\noindent \textcolor{affblue}{Blue columns} = Aff speeches. \textcolor{negred}{Red columns} = Neg speeches. Write each response \textit{directly across} from the argument it answers.
+\noindent \textcolor{affblue}{Blue columns} = Aff speeches. \textcolor{negred}{Red columns} = Neg speeches. The column headers will automatically update with the speech names you set in the metadata.
 
-\vspace{1em}
+\newpage
 
 %% --- NOTATION GUIDE ---
 \noindent{\Large\textbf{3. Notation Reference}}
@@ -94,32 +94,42 @@
     \hline
     \multicolumn{3}{|l|}{\cellcolor{gray90}\textit{Core Symbols}} \\
     \hline
-    \ext & \verb|\ext| & \textbf{Extend} -- carry an unanswered argument forward to the next speech \\
-    \drop & \verb|\drop| & \textbf{Dropped} -- opponent failed to respond; argument stands \\
-    \turn & \verb|\turn| & \textbf{Turn} -- argument flipped; now helps the other side \\
-    \perm & \verb|\perm| & \textbf{Perm} -- permutation test (aff can do the plan + the alt/CP) \\
+    \ext & \verb|\ext| & \textbf{Extend} \\
+    \drop & \verb|\drop| & \textbf{Dropped}\\
+    \turn & \verb|\turn| & \textbf{Turn}\\
+    \perm & \verb|\perm| & \textbf{Perm}\\
     \hline
     \multicolumn{3}{|l|}{\cellcolor{gray90}\textit{Turns \& Responses}} \\
     \hline
-    \lturn & \verb|\lturn| & \textbf{Link turn} -- the link goes the opposite direction \\
-    \iturn & \verb|\iturn| & \textbf{Impact turn} -- the impact is actually good \\
-    \nl & \verb|\nl| & \textbf{No link} -- the argument doesn't connect to the case \\
-    \ow & \verb|\ow| & \textbf{Outweighs} -- this impact is bigger (scope, magnitude, probability) \\
+    \lturn & \verb|\lturn| & \textbf{Link turn}\\
+    \iturn & \verb|\iturn| & \textbf{Impact turn}\\
+    \nl & \verb|\nl| & \textbf{No link}\\
+    \ow & \verb|\ow| & \textbf{Outweighs}\\
     \at & \verb|\at| & \textbf{Against / Answering} -- prefix for responses (e.g.\ \at\ C1) \\
     \hline
     \multicolumn{3}{|l|}{\cellcolor{gray90}\textit{Argument Labels}} \\
     \hline
-    \link & \verb|\link| & \textbf{Link} -- marks where a link argument is made \\
-    \ix & \verb|\ix| & \textbf{Impact extension} -- extending or developing an impact \\
-    \da & \verb|\da| & \textbf{Disadvantage} -- labels a DA argument \\
-    \cp & \verb|\cp| & \textbf{Counterplan} -- labels a CP argument \\
-    \kk & \verb|\kk| & \textbf{Kritik} -- labels a K argument \\
-    \fw & \verb|\fw| & \textbf{Framework} -- labels a framework argument \\
-    \solv & \verb|\solv| & \textbf{Solvency} -- labels a solvency argument \\
+    \link & \verb|\link| & \textbf{Link}\\
+    \ix & \verb|\ix| & \textbf{Impact}\\
+    \da & \verb|\da| & \textbf{Disadvantage}\\
+    \cp & \verb|\cp| & \textbf{Counterplan}\\
+    \kk & \verb|\kk| & \textbf{Kritik}\\
+    \fw & \verb|\fw| & \textbf{Framework}\\
+    \solv & \verb|\solv| & \textbf{Solvency}\\
+    \hline
+    \multicolumn{3}{|l|}{\cellcolor{gray90}\textit{Speed List Commands}} \\
+    \hline
+    \verb|\n| & \verb|\n| & \textbf{Next Level} (Level Down) — Opens a new nested list level (1. $\rightarrow$ a. $\rightarrow$ i.). \\
+    \verb|\x| & \verb|\x| & \textbf{New Item} — Starts a new numbered or lettered argument line. \\
+    \verb|\b| & \verb|\b| & \textbf{Back Out} (Level Up) — Closes the current list level and returns to the previous one. \\
     \hline
 \end{tabularx}
-
 \vspace{1em}
+
+
+This is still a work in progress, Considering adding theory notation, also maybe just macros for perm do both perm do aff then do neg? 
+
+\newpage
 
 %% --- USAGE EXAMPLES ---
 \noindent{\Large\textbf{4. Example Flow Entries}}
@@ -133,11 +143,10 @@
     \rowcolor{gray90}
     \textbf{You write} & \textbf{Meaning} \\
     \hline
-    \verb|\ext\ econ impact| & \ext\ econ impact -- extending the econ impact forward \\
-    \verb|\drop\ solvency| & \drop\ solvency -- they dropped solvency \\
+    \verb|\ext\ econ \ix\| & \ext\ econ \ix\ -- extend econ impact \\
+    \verb|\drop\ \solv\| & \drop\ \solv\ -- dropped solvency \\
     \verb|\at\ C1: \nl| & \at\ C1: \nl\ -- answering contention 1 with ``no link'' \\
-    \verb|\lturn\ -- helps aff| & \lturn\ -- helps aff -- link-turning the argument \\
-    \verb|\ix\ poverty| & \ix\ poverty -- extending the poverty impact \\
+    \verb|\lturn\ -- helps aff| & \lturn\ -- helps aff -- link turn helps aff \\
     \verb|\ow\ -- scope + mag| & \ow\ -- scope + mag -- outweighs on scope and magnitude \\
     \verb|\perm\ do both| & \perm\ do both -- perm: do both the plan and alt \\
     \hline
@@ -151,10 +160,10 @@
 
 \begin{itemize}
     \setlength{\itemsep}{0.2em}
-    \item Write across rows: each response goes \textit{directly across} from the argument it answers.
-    \item Use arrows or lines by hand to connect arguments that interact across rows.
-    \item The \verb|\flowrow| and \verb|\flowrowbig| commands add blank rows. Add more rows to any sheet by inserting \verb|\flowrow| inside a \texttt{flowtable} environment.
-    \item Print this document \textbf{landscape} for maximum writing space.
-    \item After the round, you can type your notes into the cells for a permanent digital record.
-    \item To auto-recompile the PDF on save, run \texttt{./watch.sh} in a terminal.
+    \item Probably use this with VSCode. You can open the folder as a workspace and easily switch between sheets. You can also use the LaTeX Workshop extension to compile and view PDFs directly in VSCode.
+    \item To compile, just run \verb|pdflatex cover.tex| (or whichever sheet you're working on) in the terminal. Make sure you have \LaTeX\ installed. Maybe this works easier with Overleaf. I suspect yes, and then both people can see the flow at the same time. 
+    \item Probably make the macros what you want.
+    \item When switching sheets, maybe it's a good idea to quickly close pdf doc, open new panel, the press Ctrl-Alt-V or the icon with magnifying glass and split screen if using LaTeX Workshop in VSCode. Otherwise the pdf viewer might not update to the new sheet.
+    \item Probably control-f is your friend, especially when you go to the actual tex files.
 \end{itemize}
+
