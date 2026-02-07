@@ -1,147 +1,116 @@
-% Counterplan Flow Sheet
-% WORKFLOW: Fill in each speech section as it happens.
-%           Sections: CO (competition), PM (perms), SN (solvency/net benefit)
-%           Speeches: NC, MG, MO, LR, AR  (1AC col is grayed)
+% --- COUNTERPLAN A DEFINITIONS (Sample Filled) ---
 
-\fancyhead[L]{\textbf{CP FLOW}}
-\fancyhead[C]{\tournament{} | \roundnum}
-\fancyhead[R]{\today}
+% 1NC (LOC) - The CP Shell
+\def\CPAaNC{
+\n
+  \x \cp Text: The USFG should provide \$50B in direct grants to state energy boards.
+  \x Competition: CP is mutually exclusive; federal mandates stifle state innovation.
+\b
+} 
+\def\CPAbNC{
+\n
+  \x Solvency: State boards are closer to local grids.
+  \x Empirics: 2024 TX/CA grants deployed 40\% faster than DOE.
+\b
+}
+\def\CPAcNC{
+\n
+  \x \at NB: Avoids Federal Spending DA.
+  \x \at NB: Bypasses NEPA federal regulatory delays.
+\b
+}
+\def\CPAdNC{}
+
+% 2AC (MG) - The Responses
+\def\CPAaMG{
+\n
+  \x \perm Do both—Federal funding with state execution.
+  \x No Net Benefit—Federal standards are needed for grid security.
+  \x \at Text: Vague; "significantly increase" lacks a specific mechanism.
+\b
+}
+\def\CPAbMG{
+\n
+  \x No Solvency—States currently face \$200B in budget deficits.
+  \x Local corruption leads to mismanagement of grant funds.
+  \x \iturn States will use funds to subsidize fossil fuel plants.
+\b
+}
+\def\CPAcMG{
+\n
+  \x No NB—NEPA delays still apply to state-level infrastructure.
+  \x Spending still happens—it just moves from one ledger to another.
+\b
+}
+\def\CPAdMG{
+\n
+  \x Conditionality Bad—Neg shouldn't get to kick the CP in the 2NR.
+\b
+}
+
+% 2NC (MO) - The Rebuttals
+\def\CPAaMO{
+\n
+  \x \at \perm: "Do Both" is a severance perm; changes the plan's mandate.
+  \x Federal standards *are* the bottleneck; state autonomy is key.
+\b
+}
+\def\CPAbMO{
+\n
+  \x \at Corruption: State boards are audited more strictly than federal ones.
+  \x \at Natural Gas: CP text specifies "Renewable Grants" only.
+\b
+}
+
+% Initialize remaining speakers as empty to prevent errors
+\def\CPAaLR{} \def\CPAbLR{} \def\CPAcLR{} \def\CPAdLR{}
+\def\CPAaAR{} \def\CPAbAR{} \def\CPAcAR{} \def\CPAdAR{}
+%% -------------------- 2NC/1NR (MO/LOR) --------------------
+\def\CPAaMO{} % Competition
+\def\CPAbMO{} % Solvency
+\def\CPAcMO{} % Net Benefit (FIX: Added this)
+\def\CPAdMO{} % Perms/Theory (FIX: Added this)
+
+\def\CPAaLR{} 
+\def\CPAbLR{}
+\def\CPAcLR{}
+\def\CPAdLR{}
+
+% --- COUNTERPLAN B (Empty) ---
+\def\CPBaNC{} \def\CPBbNC{} \def\CPBcNC{} \def\CPBdNC{}
+\def\CPBaMG{} \def\CPBbMG{} \def\CPBcMG{} \def\CPBdMG{}
+\def\CPBaMO{} \def\CPBbMO{} \def\CPBcMO{} \def\CPBdMO{}
+\def\CPBaLR{} \def\CPBbLR{} \def\CPBcLR{} \def\CPBdLR{}
+\def\CPBaAR{} \def\CPBbAR{} \def\CPBcAR{} \def\CPBdAR{}
 
 %% ============================================================================
-%% CELL DEFINITIONS
-%% Naming: \CP<section><row><speech>
-%%   Sections: CO (competition), PM (perms), SN (solvency/NB)
-%%   Rows:     a, b, c
-%%   Speech:   NC, MG, MO, LR, AR
+%% THE FLOW ENGINE
 %% ============================================================================
 
-%% ==================== 1NC (LO) ====================
-% -- Competition --
-\def\CPCOaNC{}
-\def\CPCObNC{}
-% -- Perms --
-\def\CPPMaNC{}
-\def\CPPMbNC{}
-\def\CPPMcNC{}
-% -- Solvency / NB --
-\def\CPSNaNC{}
-\def\CPSNbNC{}
-\def\CPSNcNC{}
+\noindent\textbf{\Large\textcolor{cpteal}{Counterplan A:}} \hrulefill
+\vspace{0.8em}
 
-%% ==================== 2AC (MG) ====================
-% -- Competition --
-\def\CPCOaMG{}
-\def\CPCObMG{}
-% -- Perms --
-\def\CPPMaMG{}
-\def\CPPMbMG{}
-\def\CPPMcMG{}
-% -- Solvency / NB --
-\def\CPSNaMG{}
-\def\CPSNbMG{}
-\def\CPSNcMG{}
+\begin{paracol}{6}
+    % Headers
+    \cellcolor{gray90}\textbf{PMC} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{LOC}} \switchcolumn
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{MG}} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{MO}} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{LOR}} \switchcolumn
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{PMR}} \switchcolumn*
 
-%% ==================== 2NC (MO) ====================
-% -- Competition --
-\def\CPCOaMO{}
-\def\CPCObMO{}
-% -- Perms --
-\def\CPPMaMO{}
-\def\CPPMbMO{}
-\def\CPPMcMO{}
-% -- Solvency / NB --
-\def\CPSNaMO{}
-\def\CPSNbMO{}
-\def\CPSNcMO{}
+    % Row a: Competition
+    \cellcolor{gray90} \switchcolumn \CPAaNC \switchcolumn \CPAaMG \switchcolumn \CPAaMO \switchcolumn \CPAaLR \switchcolumn \CPAaAR \switchcolumn*
+    \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn*
+    
+    % Row b: Solvency
+    \cellcolor{gray90} \switchcolumn \CPAbNC \switchcolumn \CPAbMG \switchcolumn \CPAbMO \switchcolumn \CPAbLR \switchcolumn \CPAbAR \switchcolumn*
+    \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn*
 
-%% ==================== 1NR (LO) ====================
-% -- Competition --
-\def\CPCOaLR{}
-\def\CPCObLR{}
-% -- Perms --
-\def\CPPMaLR{}
-\def\CPPMbLR{}
-\def\CPPMcLR{}
-% -- Solvency / NB --
-\def\CPSNaLR{}
-\def\CPSNbLR{}
-\def\CPSNcLR{}
+    % Row c: Net Benefit
+    \cellcolor{gray90} \switchcolumn \CPAcNC \switchcolumn \CPAcMG \switchcolumn \CPAcMO \switchcolumn \CPAcLR \switchcolumn \CPAcAR \switchcolumn*
+    \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn*
 
-%% ==================== 2AR (PM) ====================
-% -- Competition --
-\def\CPCOaAR{}
-\def\CPCObAR{}
-% -- Perms --
-\def\CPPMaAR{}
-\def\CPPMbAR{}
-\def\CPPMcAR{}
-% -- Solvency / NB --
-\def\CPSNaAR{}
-\def\CPSNbAR{}
-\def\CPSNcAR{}
-
-%% ============================================================================
-%% TABLES — Auto-assembled. Don't edit below.
-%% ============================================================================
-
-\noindent{\Large\textbf{\textcolor{cpteal}{Counterplan:}}} \hrulefill
-
-\vspace{0.3em}
-
-% CP Structure
-\small
-\begin{tabular}{|p{3in}|p{3in}|p{3in}|}
-    \hline
-    \rowcolor{gray90}
-    \textbf{CP Text / Mechanism} & \textbf{Net Benefit} & \textbf{Solvency} \\
-    \hline
-    &&\\[1.8em]
-    \hline
-\end{tabular}
-\normalsize
-
-\vspace{0.6em}
-
-% Competition
-\noindent\textbf{Competition:}
-\vspace{0.2em}
-
-\begin{tabular}{|F|F|F|F|F|F|}
-\flowheader
-\cellcolor{gray90}\centering\textit{--} & \CPCOaNC & \CPCOaMG & \CPCOaMO & \CPCOaLR & \CPCOaAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \CPCObNC & \CPCObMG & \CPCObMO & \CPCObLR & \CPCObAR \\[2.5em]
-\hline
-\end{tabular}
-
-\vspace{0.6em}
-
-% Permutations
-\noindent\textbf{Permutations:}
-\vspace{0.2em}
-
-\begin{tabular}{|F|F|F|F|F|F|}
-\flowheader
-\cellcolor{gray90}\centering\textit{--} & \CPPMaNC & \CPPMaMG & \CPPMaMO & \CPPMaLR & \CPPMaAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \CPPMbNC & \CPPMbMG & \CPPMbMO & \CPPMbLR & \CPPMbAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \CPPMcNC & \CPPMcMG & \CPPMcMO & \CPPMcLR & \CPPMcAR \\[2.5em]
-\hline
-\end{tabular}
-
-\vspace{0.6em}
-
-% Solvency / NB Debate
-\noindent\textbf{CP Solvency / Net Benefit:}
-\vspace{0.2em}
-
-\begin{tabular}{|F|F|F|F|F|F|}
-\flowheader
-\cellcolor{gray90}\centering\textit{--} & \CPSNaNC & \CPSNaMG & \CPSNaMO & \CPSNaLR & \CPSNaAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \CPSNbNC & \CPSNbMG & \CPSNbMO & \CPSNbLR & \CPSNbAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \CPSNcNC & \CPSNcMG & \CPSNcMO & \CPSNcLR & \CPSNcAR \\[2.5em]
-\hline
-\end{tabular}
+    % Row d: Perms/Theory
+    \cellcolor{gray90} \switchcolumn \CPAdNC \switchcolumn \CPAdMG \switchcolumn \CPAdMO \switchcolumn \CPAdLR \switchcolumn \CPAdAR
+\end{paracol}
