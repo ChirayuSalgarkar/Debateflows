@@ -1,143 +1,75 @@
 % Disadvantage Flow Sheet
-% WORKFLOW: Fill in each speech section as it happens.
-%           DA sections: D1 (DA1 rows a-d), D2 (DA2 rows a-d)
-%           Speeches: NC, MG, MO, LR, AR  (1AC col is grayed -- DAs start in 1NC)
-
 \fancyhead[L]{\textbf{DA FLOW}}
 \fancyhead[C]{\tournament{} | \roundnum}
 \fancyhead[R]{\today}
 
 %% ============================================================================
 %% CELL DEFINITIONS
-%% Naming: \D<da#><row><speech>
-%%   DA:     1 or 2
-%%   Rows:   a, b, c, d
-%%   Speech: NC, MG, MO, LR, AR
+%% Naming: \DA<A/B><row><speech>
 %% ============================================================================
 
-%% ==================== 1NC (LO) ====================
-% -- DA 1 --
-\def\DiaNC{}
-\def\DibNC{}
-\def\DicNC{}
-\def\DidNC{}
-% -- DA 2 --
-\def\DiiaNc{}
-\def\DiibNc{}
-\def\DiicNc{}
-\def\DiidNc{}
+%% -------------------- 1NC (LO) --------------------
+\def\DAAaNC{} \def\DAAbNC{} \def\DAAcNC{} \def\DAAdNC{} % DA 1
+\def\DABaNC{} \def\DABbNC{} \def\DABcNC{} \def\DABdNC{} % DA 2
 
-%% ==================== 2AC (MG) ====================
-% -- DA 1 --
-\def\DiaMG{}
-\def\DibMG{}
-\def\DicMG{}
-\def\DidMG{}
-% -- DA 2 --
-\def\DiiaMG{}
-\def\DiibMG{}
-\def\DiicMG{}
-\def\DiidMG{}
+%% -------------------- 2AC (MG) --------------------
+\def\DAAaMG{} \def\DAAbMG{} \def\DAAcMG{} \def\DAAdMG{}
+\def\DABaMG{} \def\DABbMG{} \def\DABcMG{} \def\DABdMG{}
 
-%% ==================== 2NC (MO) ====================
-% -- DA 1 --
-\def\DiaMO{}
-\def\DibMO{}
-\def\DicMO{}
-\def\DidMO{}
-% -- DA 2 --
-\def\DiiaMO{}
-\def\DiibMO{}
-\def\DiicMO{}
-\def\DiidMO{}
+%% -------------------- 2NC (MO) --------------------
+\def\DAAaMO{} \def\DAAbMO{} \def\DAAcMO{} \def\DAAdMO{}
+\def\DABaMO{} \def\DABbMO{} \def\DABcMO{} \def\DABdMO{}
 
-%% ==================== 1NR (LO) ====================
-% -- DA 1 --
-\def\DiaLR{}
-\def\DibLR{}
-\def\DicLR{}
-\def\DidLR{}
-% -- DA 2 --
-\def\DiiaLR{}
-\def\DiibLR{}
-\def\DiicLR{}
-\def\DiidLR{}
+%% -------------------- 1NR (LO) --------------------
+\def\DAAaLR{} \def\DAAbLR{} \def\DAAcLR{} \def\DAAdLR{}
+\def\DABaLR{} \def\DABbLR{} \def\DABcLR{} \def\DABdLR{}
 
-%% ==================== 2AR (PM) ====================
-% -- DA 1 --
-\def\DiaAR{}
-\def\DibAR{}
-\def\DicAR{}
-\def\DidAR{}
-% -- DA 2 --
-\def\DiiaAR{}
-\def\DiibAR{}
-\def\DiicAR{}
-\def\DiidAR{}
+%% -------------------- 2AR (PM) --------------------
+\def\DAAaAR{} \def\DAAbAR{} \def\DAAcAR{} \def\DAAdAR{}
+\def\DABaAR{} \def\DABbAR{} \def\DABcAR{} \def\DABdAR{}
 
 %% ============================================================================
-%% TABLES — Auto-assembled. Don't edit below.
+%% THE FLOW ENGINE (PARACOL)
 %% ============================================================================
 
-% DA 1
-\noindent{\Large\textbf{\textcolor{dabrown}{Disadvantage 1:}}} \hrulefill
+% --- DISADVANTAGE 1 ---
+\noindent\textbf{\Large\textcolor{dabrown}{Disadvantage 1:}} \hrulefill
+\vspace{0.5em}
 
-\vspace{0.3em}
+\begin{paracol}{6}
+    % Headers
+    \cellcolor{gray90}\textbf{1AC} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{LOC}} \switchcolumn
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{MG}} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{MO}} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{LOR}} \switchcolumn
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{PMR}} \switchcolumn*
 
-% DA Structure Summary
-\small
-\begin{tabular}{|p{2.3in}|p{2.3in}|p{2.3in}|p{2.3in}|}
-    \hline
-    \rowcolor{gray90}
-    \textbf{Uniqueness} & \textbf{Link} & \textbf{Internal Link} & \textbf{Impact} \\
-    \hline
-    &&&\\[1.5em]
-    \hline
-\end{tabular}
-\normalsize
+    % Content Rows (Row a-d) - 1AC column stays gray/empty
+    \cellcolor{gray90} \switchcolumn \DAAaNC \switchcolumn \DAAaMG \switchcolumn \DAAaMO \switchcolumn \DAAaLR \switchcolumn \DAAaAR \switchcolumn*
+    \cellcolor{gray90} \switchcolumn \DAAbNC \switchcolumn \DAAbMG \switchcolumn \DAAbMO \switchcolumn \DAAbLR \switchcolumn \DAAbAR \switchcolumn*
+    \cellcolor{gray90} \switchcolumn \DAAcNC \switchcolumn \DAAcMG \switchcolumn \DAAcMO \switchcolumn \DAAcLR \switchcolumn \DAAcAR \switchcolumn*
+    \cellcolor{gray90} \switchcolumn \DAAdNC \switchcolumn \DAAdMG \switchcolumn \DAAdMO \switchcolumn \DAAdLR \switchcolumn \DAAdAR
+\end{paracol}
 
-\vspace{0.4em}
+\newpage
 
-\begin{tabular}{|F|F|F|F|F|F|}
-\flowheader
-\cellcolor{gray90}\centering\textit{--} & \DiaNC & \DiaMG & \DiaMO & \DiaLR & \DiaAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \DibNC & \DibMG & \DibMO & \DibLR & \DibAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \DicNC & \DicMG & \DicMO & \DicLR & \DicAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \DidNC & \DidMG & \DidMO & \DidLR & \DidAR \\[2.5em]
-\hline
-\end{tabular}
+% --- DISADVANTAGE 2 ---
+\noindent\textbf{\Large\textcolor{dabrown}{Disadvantage 2:}} \hrulefill
+\vspace{0.5em}
 
-\vspace{1em}
+\begin{paracol}{6}
+    % Headers
+    \cellcolor{gray90}\textbf{1AC} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{LOC}} \switchcolumn
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{MG}} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{MO}} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{LOR}} \switchcolumn
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{PMR}} \switchcolumn*
 
-% DA 2
-\noindent{\Large\textbf{\textcolor{dabrown}{Disadvantage 2:}}} \hrulefill
-
-\vspace{0.3em}
-
-\small
-\begin{tabular}{|p{2.3in}|p{2.3in}|p{2.3in}|p{2.3in}|}
-    \hline
-    \rowcolor{gray90}
-    \textbf{Uniqueness} & \textbf{Link} & \textbf{Internal Link} & \textbf{Impact} \\
-    \hline
-    &&&\\[1.5em]
-    \hline
-\end{tabular}
-\normalsize
-
-\vspace{0.4em}
-
-\begin{tabular}{|F|F|F|F|F|F|}
-\flowheader
-\cellcolor{gray90}\centering\textit{--} & \DiiaNc & \DiiaMG & \DiiaMO & \DiiaLR & \DiiaAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \DiibNc & \DiibMG & \DiibMO & \DiibLR & \DiibAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \DiicNc & \DiicMG & \DiicMO & \DiicLR & \DiicAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \DiidNc & \DiidMG & \DiidMO & \DiidLR & \DiidAR \\[2.5em]
-\hline
-\end{tabular}
+    % Content Rows
+    \cellcolor{gray90} \switchcolumn \DABaNC \switchcolumn \DABaMG \switchcolumn \DABaMO \switchcolumn \DABaLR \switchcolumn \DABaAR \switchcolumn*
+    \cellcolor{gray90} \switchcolumn \DABbNC \switchcolumn \DABbMG \switchcolumn \DABbMO \switchcolumn \DABbLR \switchcolumn \DABbAR \switchcolumn*
+    \cellcolor{gray90} \switchcolumn \DABcNC \switchcolumn \DABcMG \switchcolumn \DABcMO \switchcolumn \DABcLR \switchcolumn \DABcAR \switchcolumn*
+    \cellcolor{gray90} \switchcolumn \DABdNC \switchcolumn \DABdMG \switchcolumn \DABdMO \switchcolumn \DABdLR \switchcolumn \DABdAR
+\end{paracol}
