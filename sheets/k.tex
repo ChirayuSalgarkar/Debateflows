@@ -1,169 +1,71 @@
-% Kritik Flow Sheet
-% WORKFLOW: Fill in each speech section as it happens.
-%           Sections: KF (framework/ROB), KL (links), KA (alt/solvency), KP (perms)
-%           Speeches: NC, MG, MO, LR, AR  (1AC col is grayed)
-
-\fancyhead[L]{\textbf{K FLOW}}
+% KNeg Flow Sheet
+\fancyhead[L]{\textbf{KNEG FLOW}}
 \fancyhead[C]{\tournament{} | \roundnum}
 \fancyhead[R]{\today}
 
 %% ============================================================================
-%% CELL DEFINITIONS
-%% Naming: \K<section><row><speech>
-%%   Sections: F (framework/ROB), L (links), A (alt/solvency), P (perms)
-%%   Rows:     a, b, c
-%%   Speech:   NC, MG, MO, LR, AR
+%% 1. CELL DEFINITIONS
+%% Naming: \KN<row><speech>
+%% Rows: a=Framework, b=Link(s), c=Impact(s), d=Alternative/Solvency
 %% ============================================================================
 
-%% ==================== 1NC (LO) ====================
-% -- Framework / ROB --
-\def\KFaNC{}
-\def\KFbNC{}
-% -- Links --
-\def\KLaNC{}
-\def\KLbNC{}
-\def\KLcNC{}
-% -- Alt / Solvency --
-\def\KAaNC{}
-\def\KAbNC{}
-% -- Perms --
-\def\KPaNC{}
-\def\KPbNC{}
+% --- KNEG SUMMARY SHELL ---
+\def\KNegAlt{The Alternative text (e.g., The Negative acts as a site of refusal...)}
 
-%% ==================== 2AC (MG) ====================
-% -- Framework / ROB --
-\def\KFaMG{}
-\def\KFbMG{}
-% -- Links --
-\def\KLaMG{}
-\def\KLbMG{}
-\def\KLcMG{}
-% -- Alt / Solvency --
-\def\KAaMG{}
-\def\KAbMG{}
-% -- Perms --
-\def\KPaMG{}
-\def\KPbMG{}
+% --- 1NC (LOC) ---
+\def\KNaNC{Framework} \def\KNbNC{Links} \def\KNcNC{Impacts} \def\KNdNC{Alternative}
 
-%% ==================== 2NC (MO) ====================
-% -- Framework / ROB --
-\def\KFaMO{}
-\def\KFbMO{}
-% -- Links --
-\def\KLaMO{}
-\def\KLbMO{}
-\def\KLcMO{}
-% -- Alt / Solvency --
-\def\KAaMO{}
-\def\KAbMO{}
-% -- Perms --
-\def\KPaMO{}
-\def\KPbMO{}
+% --- 2AC (MG) ---
+\def\KNaMG{} \def\KNbMG{} \def\KNcMG{} \def\KNdMG{}
 
-%% ==================== 1NR (LO) ====================
-% -- Framework / ROB --
-\def\KFaLR{}
-\def\KFbLR{}
-% -- Links --
-\def\KLaLR{}
-\def\KLbLR{}
-\def\KLcLR{}
-% -- Alt / Solvency --
-\def\KAaLR{}
-\def\KAbLR{}
-% -- Perms --
-\def\KPaLR{}
-\def\KPbLR{}
+% --- 2NC (MO) ---
+\def\KNaMO{} \def\KNbMO{} \def\KNcMO{} \def\KNdMO{}
 
-%% ==================== 2AR (PM) ====================
-% -- Framework / ROB --
-\def\KFaAR{}
-\def\KFbAR{}
-% -- Links --
-\def\KLaAR{}
-\def\KLbAR{}
-\def\KLcAR{}
-% -- Alt / Solvency --
-\def\KAaAR{}
-\def\KAbAR{}
-% -- Perms --
-\def\KPaAR{}
-\def\KPbAR{}
+% --- 1NR (LOR) ---
+\def\KNaLR{} \def\KNbLR{} \def\KNcLR{} \def\KNdLR{}
+
+% --- 2AR (PMR) ---
+\def\KNaAR{} \def\KNbAR{} \def\KNcAR{} \def\KNdAR{}
 
 %% ============================================================================
-%% TABLES — Auto-assembled. Don't edit below.
+%% 2. THE FLOW ENGINE (PARACOL)
 %% ============================================================================
 
-\noindent{\Large\textbf{\textcolor{kpurple}{Kritik:}}} \hrulefill
+% --- ALTERNATIVE TEXT BOX ---
+\noindent\textbf{\Large\textcolor{dabrown}{The Kritik Alternative:}} \hrulefill
+\vspace{0.4em}
 
-\vspace{0.3em}
-
-% K Structure
 \small
-\begin{tabular}{|p{2.3in}|p{2.3in}|p{2.3in}|p{2.3in}|}
+\begin{tabularx}{\textwidth}{|X|}
     \hline
-    \rowcolor{gray90}
-    \textbf{Link} & \textbf{Impact / Implications} & \textbf{Alternative} & \textbf{K Framework} \\
-    \hline
-    &&&\\[1.8em]
-    \hline
-\end{tabular}
+    \rowcolor{gray90} \textbf{Proposed Alternative / Methodology} \\ \hline
+    \KNegAlt \\[2.5em] \hline
+\end{tabularx}
 \normalsize
 
-\vspace{0.5em}
+\vspace{1em}
 
-% Framework / ROB
-\noindent\textbf{K Framework / ROB / ROJ:}
-\vspace{0.2em}
+\begin{paracol}{6}
+    % Headers - PMC is grayed out as the K starts in the LOC
+    \cellcolor{gray90}\textbf{PMC} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{LOC}} \switchcolumn
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{MG}} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{MO}} \switchcolumn
+    \cellcolor{negbg}\textbf{\textcolor{negred}{LOR}} \switchcolumn
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{PMR}} \switchcolumn*
 
-\begin{tabular}{|F|F|F|F|F|F|}
-\flowheader
-\cellcolor{gray90}\centering\textit{--} & \KFaNC & \KFaMG & \KFaMO & \KFaLR & \KFaAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \KFbNC & \KFbMG & \KFbMO & \KFbLR & \KFbAR \\[2.5em]
-\hline
-\end{tabular}
+    % Row a: Framework
+    \cellcolor{gray90} \switchcolumn \KNaNC \switchcolumn \KNaMG \switchcolumn \KNaMO \switchcolumn \KNaLR \switchcolumn \KNaAR \switchcolumn*
+    \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn*
+    
+    % Row b: Link Debate
+    \cellcolor{gray90} \switchcolumn \KNbNC \switchcolumn \KNbMG \switchcolumn \KNbMO \switchcolumn \KNbLR \switchcolumn \KNbAR \switchcolumn*
+    \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn*
 
-\vspace{0.5em}
+    % Row c: Impact Debate
+    \cellcolor{gray90} \switchcolumn \KNcNC \switchcolumn \KNcMG \switchcolumn \KNcMO \switchcolumn \KNcLR \switchcolumn \KNcAR \switchcolumn*
+    \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn \hrulefill \switchcolumn*
 
-% Links
-\noindent\textbf{Links:}
-\vspace{0.2em}
-
-\begin{tabular}{|F|F|F|F|F|F|}
-\flowheader
-\cellcolor{gray90}\centering\textit{--} & \KLaNC & \KLaMG & \KLaMO & \KLaLR & \KLaAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \KLbNC & \KLbMG & \KLbMO & \KLbLR & \KLbAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \KLcNC & \KLcMG & \KLcMO & \KLcLR & \KLcAR \\[2.5em]
-\hline
-\end{tabular}
-
-\vspace{0.5em}
-
-% Alternative
-\noindent\textbf{Alternative / Solvency:}
-\vspace{0.2em}
-
-\begin{tabular}{|F|F|F|F|F|F|}
-\flowheader
-\cellcolor{gray90}\centering\textit{--} & \KAaNC & \KAaMG & \KAaMO & \KAaLR & \KAaAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \KAbNC & \KAbMG & \KAbMO & \KAbLR & \KAbAR \\[2.5em]
-\hline
-\end{tabular}
-
-\vspace{0.5em}
-
-% Perms
-\noindent\textbf{Permutations:}
-\vspace{0.2em}
-
-\begin{tabular}{|F|F|F|F|F|F|}
-\flowheader
-\cellcolor{gray90}\centering\textit{--} & \KPaNC & \KPaMG & \KPaMO & \KPaLR & \KPaAR \\[2.5em]
-\hline
-\cellcolor{gray90}\centering\textit{--} & \KPbNC & \KPbMG & \KPbMO & \KPbLR & \KPbAR \\[2.5em]
-\hline
-\end{tabular}
+    % Row d: Alternative / Solvency / Permutations
+    \cellcolor{gray90} \switchcolumn \KNdNC \switchcolumn \KNdMG \switchcolumn \KNdMO \switchcolumn \KNdLR \switchcolumn \KNdAR
+\end{paracol}
