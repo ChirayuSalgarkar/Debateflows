@@ -1,4 +1,4 @@
-% NPDA Flow - Shared Preamble
+% NPDA Flow - Preamble
 % Include this in all sheet files
 
 \usepackage[margin=0.5in]{geometry}
@@ -9,10 +9,13 @@
 \usepackage{colortbl}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{colortbl}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{hyperref}
 \usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{longtable}
 
 %% ============================================================================
 %% COLORS
@@ -64,12 +67,12 @@
 %% ============================================================================
 \newcommand{\flowheader}{%
     \hline
-    \cellcolor{affbg}\textbf{\textcolor{affblue}{1AC}} &
-    \cellcolor{negbg}\textbf{\textcolor{negred}{1NC}} &
-    \cellcolor{affbg}\textbf{\textcolor{affblue}{2AC}} &
-    \cellcolor{negbg}\textbf{\textcolor{negred}{2NC}} &
-    \cellcolor{negbg}\textbf{\textcolor{negred}{1NR}} &
-    \cellcolor{affbg}\textbf{\textcolor{affblue}{2AR}} \\
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{PMC}} &
+    \cellcolor{negbg}\textbf{\textcolor{negred}{LOC}} &
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{MG}} &
+    \cellcolor{negbg}\textbf{\textcolor{negred}{MO}} &
+    \cellcolor{negbg}\textbf{\textcolor{negred}{LOR}} &
+    \cellcolor{affbg}\textbf{\textcolor{affblue}{PMR}} \\
     \hline
 }
 
@@ -104,9 +107,31 @@
 %% ============================================================================
 %% ROUND METADATA - Edit these for each round
 %% ============================================================================
-\newcommand{\tournament}{Tournament Name}
+\newcommand{\tournament}{Mercer Macke}
 \newcommand{\roundnum}{Round 1}
 \newcommand{\affteam}{Aff Team}
 \newcommand{\negteam}{Neg Team}
 \newcommand{\judge}{Judge}
-\newcommand{\resolution}{THBT...}
+\newcommand{\resolution}{Resolution goes here}
+
+
+%SPEEDY Commands
+
+\usepackage{enumitem}
+
+
+% Tight, no-indent debate lists
+\setlist[enumerate]{
+    leftmargin=*,      % no extra tab space
+    itemsep=0pt,       % no vertical gaps
+    topsep=0pt,
+    parsep=0pt,
+    partopsep=0pt,
+    labelsep=0.4em     % small gap after number
+}
+
+
+\newcommand{\n}{\begin{enumerate}} % "Next" level
+\renewcommand{\b}{\end{enumerate}}   % "Back" out
+\newcommand{\x}{\item}             % Item
+\usepackage{paracol}
